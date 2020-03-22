@@ -227,21 +227,31 @@
 
             <div id="skills" class="secondary-theme">
                 <h4 class="header_text primary-theme-text">Skills</h4>
-                {{#> list category="Programming Languages" contents='[Python, C++, C, Node.js, Java, JavaScript, HTML5, CSS3, AngularJS, React, Android Studio, Solidity, Matlab, SQL, SQLite]'}}{{/list}}
+                {{#> list category="Programming Languages" contents='[Python, C++, C, Node.js, Java, JavaScript, HTML5, CSS3, AngularJS, React, Android Studio, Solidity, Matlab, SQL, SQLite,  Ruby, OCaml]'}}{{/list}}
                 {{#> list category="Operating Systems" contents='[MacOS, Linux, Windows, ChromeOS]'}}{{/list}}
-                {{#> list category="Software and Libraries" contents='[TensorFlow, Keras, OpenCV, OpenMP, OpenGL, CUDA, Docker, ElasticSearch, VirtualBox, Amazon Web Services, DigitalOcean]'}}{{/list}}
+                {{#> list category="Software and Libraries" contents='[TensorFlow, Keras, OpenCV, OpenMP, OpenGL, CUDA, Docker, ElasticSearch, VirtualBox, Amazon Web Services, DigitalOcean, Selenium]'}}{{/list}}
                 {{#> list category="Industry Knowledge" contents='[Machine Learning, Artificial Intelligence, Deep Learning, Computer Vision, Parallel Computing]'}}{{/list}}
                 {{#> list category="Interpersonal Skills" contents='[Team Management, Team Building, Youth Mentoring, Teaching]'}}{{/list}}
-                {{#> list category="Languages" contents='[English,Hindi,Spanish]'}}{{/list}}
+                {{#> list category="Languages" contents='[English,Hindi]'}}{{/list}}
             </div>
 
             <div id="extracurriculars" class="primary-theme z-depth-2">
                 <h4 class="header_text secondary-theme-text">Extracurriculars</h4>
                 {{#> card elid="muas" card_img="/landing/css/muas.jpg" position="Vision Sub-Team, Maryland Unmanned Aerial Systems" company="University of Maryland at College Park" duration="September 2019 - Present" location="College Park, Maryland"}}
                     {{#*inline "modal_content"}}   
-                        {{#> describe skillset='[Python]'}}
+                        {{#> describe skillset='[Python,Arduino,line,Google Colaboratory,line,Machine Learning]'}}
                             {{#* inline "description"}}
-                            <p class="body_text">.</p>
+                            <p class="body_text">I am a member of the Maryland Unmanned Aerial Systems Club at UMD. Through this club we engineer and program a drone to compete at the Association For Unmanned Systems International's Student Unmanned Aerial Systems Competition. I work on the Vision Subteam and work with enabling the drone to process and classify ground targets.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="rres" card_img="/landing/css/rres.jpg" position="Member, Rising Researchers" company="University of Maryland at College Park" duration="September 2019 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}   
+                        {{#> describe skillset='[Teaching,Youth Mentoring]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I am a member of the Rising Researchers Club at UMD. I work with members of this club to create material to educate high school students on how they can read and understand research papers and get involved with academic research.</p>
                             {{/inline}}
                         {{/describe}}
                     {{/inline}}
@@ -250,8 +260,12 @@
 
             <div id="accomplishments" class="secondary-theme">
                 <h4 class="header_text primary-theme-text">Accomplishments</h4>
+				{{#> card card_link="https://my.generalassemb.ly/awards/CV69HDHJR" card_img="/landing/css/ga.png" position="Certified Data Scientist Level 1 Credential" company="General Assembly" duration="November 2019" location=""}}
+				{{/card}}
+
                 {{#> card card_link="https://edu.openedg.org/certificates/verify/roZE.GCtS.b5FD" card_img="/landing/css/pinst.png" position="Certified Associate In Python Programming" company="Python Institute, OpenEDG Education Platform" duration="September 2018" location="International"}}
                 {{/card}}
+
                 {{#> card elid="acm" card_img="/landing/css/acm.png" position="3rd Place" company="ACM@UVa: HSPC" duration="March 2018, March 2019" location="University of Virginia"}}
                     {{#*inline "modal_content"}} 
                         {{#> describe skillset='[Python,C++,Java,line,Team Collaboration,Competitive Programming]'}}
