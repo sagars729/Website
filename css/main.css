@@ -57,10 +57,18 @@ footer a:active{
     margin: 0px;
 }
 
-.primary_theme{
+.primary-theme {
 	background-color: #c80000;
 }
 
-.secondary_theme{
+.secondary-theme {
 	background-color: white;
+}
+
+.primary-theme-text {
+	color: #c80000;
+}
+
+.secondary-theme-text {
+	color: white;
 }
