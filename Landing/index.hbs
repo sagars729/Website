@@ -32,6 +32,28 @@
 
             <div id="experience" class="secondary-theme">
                 <h4 class="header_text primary-theme-text">Experiences</h4>
+                
+				{{#> card elid="dit" card_img="/landing/css/dit.png" position="Student Software Developer" company="University of Maryland at College Park" duration="January 2020 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Pytest,Selenium,Locust,JMeter,line,Github,ServiceNow,Jira,Bitbucket,AWS EC2,line,Automation,Testing]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I currently work as a Student Software Developer for the Division of Information Technology at the University of Maryland. I am working on projects with Service-Now and automating testing using Selenium WebDriver.</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/ServiceNow" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="Ongoing Project" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+
+				{{#> card elid="gan" card_img="/landing/css/umd.png" position="Undergraduate Researcher" company="University of Maryland at College Park" duration="October 2019 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Keras,line,Github,JupyterLab,Anaconda Cloud,line,Computer Vision,Machine Learning]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I am currently pursuing research focused on investigating various Generative Adversarial Networks, their applications, and extrapolating them to new datasets and problems. As a part of this research, I write journal reports on the observations and analysis of experiments.</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/GAN" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="Ongoing Project" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
 
                 {{#> card elid="anant" card_img="/landing/css/anant.png" position="Internet Architect Apprentice, Blog Writer" company="Anant Corporation" duration="June 2018 - August 2018" location="Washington D.C."}}
                     {{#*inline "modal_content"}}
