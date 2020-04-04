@@ -7,7 +7,7 @@
         <meta prefix="og: http://ogp.me/ns#" name="author" content="Sagar Saxena">
         <meta prefix="og: http://ogp.me/ns#" property="og:type" content="Personal Website">
         <meta prefix="og: http://ogp.me/ns#" property="og:description" content="My Personal Website" />
-        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="/landing/css/purple_sky.jpg" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="/landing/css/purple_space.jpg" />
         <meta prefix="og: http://ogp.me/ns#" property="og:url" content="/" />
         <title>Sagar Saxena</title>
     {{/inline}}
@@ -107,7 +107,15 @@
                 <h4 class="header_text secondary-theme-text">Education</h4>
 
                 {{#> card elid="umd" card_img="/landing/css/umd.png" position="Computer Science Major" company="University of Maryland at College Park" duration="August 2019 - Present" location="College Park, Maryland"}}
-                    {{#*inline "modal_content"}}
+		    {{#*inline "modal_content"}}
+		    {{#> describe skillset='[Computer Science,Data Science,Mathematics]'}}
+            		{{#* inline "description"}}
+                    		<p class="body_text">Computer Science Major</h6>
+                    		<p class="body_text">Computer Science Departmental Honors Program</h6>
+                    		<p class="body_text">Data Science Specialization</h6>
+                    		<p class="body_text">Mathematics Minor</h6>
+            		{{/inline}}
+		    {{/describe}}
                     <h6 class="header_text primary-theme-text">Courses</h6> 
                     {{#> list disableFlow="true" category="Computer Science" contents='[Discrete Structures,Computer Systems,Algorithms,Organization of Programming Languages]'}}{{/list}}
                     {{#> list disableFlow="true" category="Mathematics" contents='[Linear Algebra,Number Theory]'}}{{/list}}
@@ -115,7 +123,7 @@
                     {{/inline}}
                 {{/card}}
 
-                {{#> card elid="tj" card_img="/landing/css/tj.png" position="Senior, Computer Science" company="Thomas Jefferson High School For Science And Technology" duration="August 2015 - June 2019" location="Alexandria, Virginia"}}
+                {{#> card elid="tj" card_img="/landing/css/tj.png" position="Alumnus, Computer Science" company="Thomas Jefferson High School For Science And Technology" duration="August 2015 - June 2019" location="Alexandria, Virginia"}}
                     {{#*inline "modal_content"}}
                     <h6 class="header_text primary-theme-text">Courses</h6> 
                     {{#> list disableFlow="true" category="Post-AP Courses" contents='[Computer Vision,Artificial Intelligence,Parallel Computing,Multivariable Calculus,Linear Algebra,Web Development,Mobile Development]'}}{{/list}}
@@ -124,11 +132,11 @@
                     {{/inline}}
                 {{/card}}
 
-                {{#> card elid="csl" card_img="/landing/css/csl.png" position="Researcher, Computer Systems Lab" company="Thomas Jefferson High School For Science And Technology" duration="September 2018 - Present" location="Alexandria, Virginia"}}
+                {{#> card elid="csl" card_img="/landing/css/csl.png" position="Researcher, Computer Systems Lab" company="Thomas Jefferson High School For Science And Technology" duration="September 2018 - June 2019" location="Alexandria, Virginia"}}
                     {{#*inline "modal_content"}}   
                         {{#> describe skillset='[Python,Matlab,SQLite,OpenCV,Keras,line,Computer Vision,Machine Learning,line,Research]'}}
                             {{#* inline "description"}}
-                            <p class="body_text">I am creating a system that uses Computer Vision and Interactive Machine Learning to take attendance of a traditional school classroom. This project has four phases: detection, tracking, learning, and classification. This page will be updated as this project progresses.</p>
+                            <p class="body_text">For my senior research project at TJHSST, I created a system that uses Computer Vision and Interactive Machine Learning to take attendance of a traditional school classroom. This project has four phases: detection, tracking, learning, and classification.</p>
                             <div class="row">
                                 <div class="col s6">
                                     <img style="width:100%" src="/landing/css/detection.png">

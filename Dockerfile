@@ -1,6 +1,6 @@
 FROM node:10
 
-WORKDIR /home/ubuntu/Website
+WORKDIR /home/ubuntu/app
 
 COPY package*.json ./
 
