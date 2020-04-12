@@ -6,54 +6,6 @@ var app = express();
 var path = require('path');
 var hbs = require( 'express-handlebars' )//require('hbs');
 var cookieSession = require('cookie-session')
-// -------------- express initialization -------------- //
-
-app.set('port', process.env.PORT || 8080 );
-app.engine( 'hbs', hbs( { 
-  extname: 'hbs', 
-  partialsDir: path.join(__dirname, 'static', 'views', 'partials'),
-} ) );
-app.set('view engine', 'hbs');
-
-//cookies//
-app.set('trust proxy', 1) // trust first proxy 
-
-app.use(cookieSession({
-  name: 'cookieSession',
-  keys: ['TheseWillBe123', 'Replaced456']
-}))
-
-
-// -------------- serve static folders -------------- //
-app.use('/home/js', 	express.static(path.join(__dirname,'static', 'Home', 'js')))
-app.use('/home/css',	express.static(path.join(__dirname,'static', 'Home', 'css')))
-app.use('/documents', 	express.static(path.join(__dirname,'static', 'Documents')))
-app.use('/landing/css', express.static(path.join(__dirname,'static', 'Landing','css')))
-app.use('/landing/js', 	express.static(path.join(__dirname,'static', 'Landing','js')))
-app.use('/covid/css', 	express.static(path.join(__dirname,'static', 'HooHacks20','Website','css')))
-app.use('/covid/js', 	express.static(path.join(__dirname,'static', 'HooHacks20','Website','js')))
-
-// -------------- express 'get' handlers -------------- //
-app.get('/', function(req, res){
-    res.redirect('/landing')//.render(path.join(__dirname,'index.hbs'),{'profile':req.session.profile});
-});
-app.get('/home', function(req, res){
-	console.log("Going To Home Page");
-    res.render(path.join(__dirname,'static','Home','index.hbs'),{layout: false});
-});
-
-// -------------- Landing Page -------------- //
-app.get('/landing', function(req,res){
-	console.log("Going To Landing Page");
-    res.render(path.join(__dirname,'static','Landing','index.hbs'), {'jump':req.query.jump}); 
-});
-
-app.get('/attendance', function(req,res){
-	console.log("Jumping To Attendance Card");
-    res.redirect('/landing?jump=csl_card')
-});
-
-// ------------- HooHacks20 ------------- //
 const sgMail = require('@sendgrid/mail');
 const { MongoClient } = require('mongodb');
 
@@ -87,10 +39,39 @@ async function dataOfFuture(client, day){
     return dataFuture;
 }
 
+// -------------- express initialization -------------- //
 
+app.set('port', process.env.PORT || 8080 );
+app.engine( 'hbs', hbs( { 
+  extname: 'hbs', 
+  partialsDir: path.join(__dirname, 'views', 'partials'),
+} ) );
+app.set('view engine', 'hbs');
+
+//cookies//
+app.set('trust proxy', 1) // trust first proxy 
+
+app.use(cookieSession({
+  name: 'cookieSession',
+  keys: ['TheseWillBe123', 'Replaced456']
+}))
+
+
+// -------------- serve static folders -------------- //
+app.use('/home/js', express.static(path.join(__dirname, 'js')))
+app.use('/home/css', express.static(path.join(__dirname, 'css')))
+app.use('/covid/css', express.static(path.join(__dirname, 'Website','css')))
+app.use('/covid/js', express.static(path.join(__dirname, 'Website','js')))
+
+// -------------- express 'get' handlers -------------- //
+app.get('/', function(req, res){
+    res.redirect('/covid')//.render(path.join(__dirname,'index.hbs'),{'profile':req.session.profile});
+});
+
+// -------------- Landing Page -------------- //
 app.get('/covid', function(req,res){
 	console.log("Going To Website");
-    res.render(path.join(__dirname,'static','HooHacks20','Website','index.hbs')); 
+    res.render(path.join(__dirname,'Website','index.hbs')); 
 });
 
 app.get('/covid_dates', function(req, res) {
@@ -159,7 +140,6 @@ app.get('/covid_email', function(req,res){
     }
     res.send(response)
 });
-
 // -------------- listener -------------- //
 // The listener is what keeps node 'alive.' 
 app.get('/:page',function(req,res){
