@@ -6,6 +6,8 @@ var app = express();
 var path = require('path');
 var hbs = require( 'express-handlebars' )//require('hbs');
 var cookieSession = require('cookie-session')
+var fs = require("fs");
+var creds = JSON.parse(fs.readFileSync("creds.json"))
 // -------------- express initialization -------------- //
 
 app.set('port', process.env.PORT || 8080 );
@@ -57,8 +59,8 @@ app.get('/attendance', function(req,res){
 const sgMail = require('@sendgrid/mail');
 const { MongoClient } = require('mongodb');
 
-sgMail.setApiKey('SG.YP5pBZoESoexi0rFM5KYEg.PP97oVi5RByg5qkSehkPHyEAZnzPszwhPhpewzjOBGw');
-const uri = "mongodb+srv://Hackers:HooHacks@hoohacks2020-czgp0.mongodb.net/test?retryWrites=true&w=majority";
+sgMail.setApiKey(creds.twillio);
+const uri = "mongodb+srv://" + creds.mongo + "@hoohacks2020-czgp0.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
 client.connect();
 
@@ -160,6 +162,8 @@ app.get('/covid_email', function(req,res){
     res.send(response)
 });
 
+// -------- Spotify To Youtube ---------- //
+//app.get(
 // -------------- listener -------------- //
 // The listener is what keeps node 'alive.' 
 app.get('/:page',function(req,res){
