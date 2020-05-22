@@ -8,6 +8,7 @@ var hbs = require( 'express-handlebars' )//require('hbs');
 var cookieSession = require('cookie-session')
 var fs = require("fs");
 var creds = JSON.parse(fs.readFileSync("creds.json"))
+var mysql = require('mysql');
 // -------------- express initialization -------------- //
 
 app.set('port', process.env.PORT || 8080 );
@@ -55,6 +56,14 @@ app.get('/attendance', function(req,res){
     res.redirect('/landing?jump=csl_card')
 });
 
+app.get('/gan', function(req,res){
+	console.log("Jumping To Attendance Card");
+    res.redirect('/landing?jump=gan_card')
+});
+
+app.get('/resume', function(req, res){
+	res.redirect('/documents/Sagar_Saxena_Resume_Hidden.pdf');
+});
 // ------------- HooHacks20 ------------- //
 const sgMail = require('@sendgrid/mail');
 const { MongoClient } = require('mongodb');
