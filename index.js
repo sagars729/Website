@@ -35,6 +35,8 @@ app.use('/landing/css', express.static(path.join(__dirname,'static', 'Landing','
 app.use('/landing/js', 	express.static(path.join(__dirname,'static', 'Landing','js')))
 app.use('/covid/css', 	express.static(path.join(__dirname,'static', 'HooHacks20','Website','css')))
 app.use('/covid/js', 	express.static(path.join(__dirname,'static', 'HooHacks20','Website','js')))
+app.use('/secure/css', express.static(path.join(__dirname,'static', 'Secure','css')))
+app.use('/secure/js', 	express.static(path.join(__dirname,'static', 'Secure','js')))
 
 // -------------- express 'get' handlers -------------- //
 app.get('/', function(req, res){
@@ -57,8 +59,18 @@ app.get('/attendance', function(req,res){
 });
 
 app.get('/gan', function(req,res){
-	console.log("Jumping To Attendance Card");
+	console.log("Jumping To GAN Card");
     res.redirect('/landing?jump=gan_card')
+});
+
+app.get('/anant', function(req,res){
+	console.log("Jumping To Anant Card");
+    res.redirect('/landing?jump=anant_card')
+});
+
+app.get('/bigparser', function(req,res){
+	console.log("Jumping To Big Parser Card");
+    res.redirect('/landing?jump=bp_card')
 });
 
 app.get('/resume', function(req, res){
@@ -100,7 +112,6 @@ async function dataOfFuture(client, day){
 
 
 app.get('/covid', function(req,res){
-	console.log("Going To Website");
     res.render(path.join(__dirname,'static','HooHacks20','Website','index.hbs')); 
 });
 
@@ -170,13 +181,17 @@ app.get('/covid_email', function(req,res){
     }
     res.send(response)
 });
-
+// ----------- Secure Login ------------- //
+app.get('/login', function(req, res){
+    res.render(path.join(__dirname,'static','Secure','login.hbs')); 
+});	
 // -------- Spotify To Youtube ---------- //
 //app.get(
 // -------------- listener -------------- //
 // The listener is what keeps node 'alive.' 
 app.get('/:page',function(req,res){
 	console.log("Error Page Not Found");
+	res.send({"Message": "Error Page Not Found", "Code": "404"});
 });
 
 var listener = app.listen(app.get('port'), function() {

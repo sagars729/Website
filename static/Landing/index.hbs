@@ -25,7 +25,7 @@
 
             <div id="summary" class="primary-theme z-depth-2" >
                 <h4 class="header_text secondary-theme-text">Sagar Saxena</h4>
-                <p class="flow-text body_text">I am a first-year Sophomore student at the University of Maryland at College Park. I am a Computer Science Major specializing in Data Science and minoring in Mathematics. My interests lie in Machine Learning and Computer Vision. You can find out more by clicking on the sections below. </p>
+                <p class="flow-text body_text">I am a second-year Junior student at the University of Maryland at College Park. I am a Computer Science Major specializing in Data Science and minoring in Mathematics. My interests lie in Machine Learning and Computer Vision. You can find out more by clicking on the sections below. </p>
 				<p class="flow-text body_text">Welcome to my landing page! This website is created with HTML, CSS, Javascript, Handlebars, MatrealizeCSS, Node.js, Docker and running on AWS Lightsail. If you are interested can find the repository for this website <a href="https://github.com/sagars729/Website" class="secondary-theme-text">here</a>.</p>
                 <a href="https://www.linkedin.com/in/sagar-saxena-714804159/"><p style="text-align:right;"class="flow-text body_text secondary-theme-text">Check Out My LinkedIn Profile</p></a>
             </div>
@@ -33,14 +33,27 @@
             <div id="experience" class="secondary-theme">
                 <h4 class="header_text primary-theme-text">Experiences</h4>
                 
-				{{#> card elid="dit" card_img="/landing/css/dit.png" position="Student Software Developer" company="University of Maryland at College Park" duration="January 2020 - Present" location="College Park, Maryland"}}
+				{{#> card elid="capone" card_img="/landing/css/capone.png" position="Tech Incubator Intern" company="Capital One" duration="June 2020 - Present" location="College Park, Maryland"}}
                     {{#*inline "modal_content"}}
-                        {{#> describe skillset='[Python,Pytest,Selenium,Locust,JMeter,line,Github,ServiceNow,Jira,Bitbucket,AWS EC2,line,Automation,Testing]'}}
+                        {{#> describe skillset='[Python,ReactJS,AWS,line,Machine Learning,Unsupervised Learning,Google Colab,line,Agile]'}}
                             {{#* inline "description"}}
-                            <p class="body_text">I currently work as a Student Software Developer for the Division of Information Technology at the University of Maryland. I am working on projects with Service-Now and automating testing using Selenium WebDriver.</p>
+                            <p class="body_text">I am a Software Engineering Intern at the Tech Incubator Lab at UMD.</p>
+							<p class="body_text">In the fall, I worked with the Accessibility team to migrate Capital One's digital property inventory to a web interface. We created a ReactJS Web App that was hosted on AWS using S3, Lambda, add DynamoDB. </p>
+							<p class="body_text">Over the summer, I worked with the CyberML team to develop anomaly detection models for network traffic using Machine Learning. We created models from the ground up - starting with an initial research stage and ending with developed proof of concept models that are being carried forward by the CyberML team. These models will help Capital One identify new and existing threats on their network perimeter.</p>
+                            <p class="body_text">I have also gained experience working with Agile Methodology and had the opportunity to use Capital One's Tech Invest In Yourself Days to gain skills in AWS and Unsupervised Learning.</p>
+
                             {{/inline}}
                         {{/describe}}
-                        {{#> card small="true" card_link="https://github.com/sagars729/ServiceNow" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="Ongoing Project" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+                
+				{{#> card elid="ta" card_img="/landing/css/umd.png" position="Undergraduate Teaching Assistant" company="University of Maryland at College Park" duration="August 2020 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Programming Languages,OCaml,Ruby,Rust,line,Teaching,Gradescope,Piazza]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I was a CS Undergraduate Teaching Assistant for CMSC330 (Organization of Programming Languages). I held weekly office hours and helped students learn and understand the course material. </p>
+                            {{/inline}}
+                        {{/describe}}
                     {{/inline}}
                 {{/card}}
 
@@ -48,10 +61,22 @@
                     {{#*inline "modal_content"}}
                         {{#> describe skillset='[Python,Keras,line,Github,JupyterLab,Anaconda Cloud,line,Computer Vision,Machine Learning]'}}
                             {{#* inline "description"}}
-                            <p class="body_text">I am currently pursuing research focused on investigating various Generative Adversarial Networks, their applications, and extrapolating them to new datasets and problems. As a part of this research, I write journal reports on the observations and analysis of experiments.</p>
+                            <p class="body_text">I am currently pursing research on using Generative Adversarial Networks to improve building damage classification following natural disasters.</p>
+                            <p class="body_text">I have pursued research focused on investigating various Generative Adversarial Networks, their applications, and extrapolating them to new datasets and problems. As a part of this research, I wrote journal reports on the observations and analysis of experiments. I co-authored and submitted a paper on my research to the ACM Computing Surveys Journal where it is currently under review</p>
                             {{/inline}}
                         {{/describe}}
                         {{#> card small="true" card_link="https://github.com/sagars729/GAN" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="Ongoing Project" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+
+				{{#> card elid="dit" card_img="/landing/css/dit.png" position="Student Software Developer" company="University of Maryland at College Park" duration="January 2020 - June 2020" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Pytest,Selenium,Locust,JMeter,line,Github,ServiceNow,Jira,Bitbucket,AWS EC2,line,Automation,Testing]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I worked as a Student Software Developer for the Division of Information Technology at the University of Maryland. I worked on projects with Service-Now and automated user testing using Selenium WebDriver and performance testing using Locust.</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/ServiceNow" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="January 2020 - June 2020" location="This is a public repository"}}{{/card}}
                     {{/inline}}
                 {{/card}}
 
@@ -134,7 +159,7 @@
 
                 {{#> card elid="csl" card_img="/landing/css/csl.png" position="Researcher, Computer Systems Lab" company="Thomas Jefferson High School For Science And Technology" duration="September 2018 - June 2019" location="Alexandria, Virginia"}}
                     {{#*inline "modal_content"}}   
-                        {{#> describe skillset='[Python,Matlab,SQLite,OpenCV,Keras,line,Computer Vision,Machine Learning,line,Research]'}}
+                        {{#> describe skillset='[Python,Matlab,SQLite,OpenCV,Keras,HTML,Javascript,CSS,line,Computer Vision,Machine Learning,Web Development,line,Research]'}}
                             {{#* inline "description"}}
                             <p class="body_text">For my senior research project at TJHSST, I created a system that uses Computer Vision and Interactive Machine Learning to take attendance of a traditional school classroom. This project has four phases: detection, tracking, learning, and classification.</p>
                             <div class="row">
@@ -227,8 +252,27 @@
                                     <p>Green Boxes Represent Correct Classifications. Red Boxes Represent Incorrect Classifications. A Confidence Value Is Shown as a Percentange.</p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <h6>Web Interface</h6>
+									<p>To allow users to easily interact with this project, I created a website that can be run on localhost.</p>
+                                </div>
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/website.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/website.png">
+                                </div>
+                                <div class="col s6">
+                                    <h6>Interactive ML</h6>
+									<p>By using the Web Interface, users can easily train the model with new data and increase the accuracy of their model.</p>
+                                </div>
+                            </div>
                             {{/inline}}
                         {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/attendance" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="2018-2019" location="This is a public repository"}}{{/card}}
                     {{/inline}}
                 {{/card}}
             </div>
