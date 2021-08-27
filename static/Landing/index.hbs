@@ -25,7 +25,7 @@
 
             <div id="summary" class="primary-theme z-depth-2" >
                 <h4 class="header_text secondary-theme-text">Sagar Saxena</h4>
-                <p class="flow-text body_text">I am a second-year Junior student at the University of Maryland at College Park. I am a Computer Science Major specializing in Data Science and minoring in Mathematics. My interests lie in Machine Learning and Computer Vision. You can find out more by clicking on the sections below. </p>
+                <p class="flow-text body_text">I am a third-year Senior student at the University of Maryland at College Park. I am a Computer Science Major specializing in Machine Learning and minoring in Mathematics. My interests lie in Machine Learning and Computer Vision. You can find out more by clicking on the sections below. </p>
 				<p class="flow-text body_text">Welcome to my landing page! This website is created with HTML, CSS, Javascript, Handlebars, MatrealizeCSS, Node.js, Docker and running on AWS Lightsail. If you are interested can find the repository for this website <a href="https://github.com/sagars729/Website" class="secondary-theme-text">here</a>.</p>
                 <a href="https://www.linkedin.com/in/sagar-saxena-714804159/"><p style="text-align:right;"class="flow-text body_text secondary-theme-text">Check Out My LinkedIn Profile</p></a>
             </div>
@@ -33,11 +33,23 @@
             <div id="experience" class="secondary-theme">
                 <h4 class="header_text primary-theme-text">Experiences</h4>
                 
-				{{#> card elid="capone" card_img="/landing/css/capone.png" position="Tech Incubator Intern" company="Capital One" duration="June 2020 - Present" location="College Park, Maryland"}}
+				{{#> card elid="amazon" card_img="/landing/css/amazon.jpg" position="Software Development Engineering Intern" company="Amazon" duration="June 2021 - August 2021" location="Seattle, Washington"}}
                     {{#*inline "modal_content"}}
-                        {{#> describe skillset='[Python,ReactJS,AWS,line,Machine Learning,Unsupervised Learning,Google Colab,line,Agile]'}}
+                        {{#> describe skillset='[Python,Scala,AWS,line,Machine Learning,AutoGluon,Jupyter,line,Scrum,Design Doc]'}}
                             {{#* inline "description"}}
-                            <p class="body_text">I am a Software Engineering Intern at the Tech Incubator Lab at UMD.</p>
+                            <p class="body_text">I was an SDE 1 intern for the Amazon Associates team. I developed and owned an end-to-end recommendation system for matching brands with content creators. To accomplish this I created an ML recommender model and deployed it using AWS and Amazon's internal tools and services. I built a pipeline to automate data preprocessing and model training, evaluation, and prediction. I also authored a design document that detailed my research findings, proposed architecture, results, and next steps.</p>
+                            <p class="body_text">Throughout this internship, I learned how to work with multiple AWS Services such as Sagemaker, S3, EMR, ECR, CloudFormation, and IAM. I also took multiple courses through Amazon's Machine Learning University to expand my ML skills.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+                
+				{{#> card elid="capone" card_img="/landing/css/capone.png" position="Tech Incubator Intern" company="Capital One" duration="June 2020 - May 2021" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,ReactJS,AWS,line,Machine Learning,Unsupervised Learning,Google Colab,line,Agile,Open Source]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I was a Software Engineering Intern at the Tech Incubator Lab at UMD.</p>
+                            <p class="body_text">During Spring 2021, I worked with the DataProfiler team to add new features and tests to the open-source DataProfiler repository.</p>
 							<p class="body_text">In the fall, I worked with the Accessibility team to migrate Capital One's digital property inventory to a web interface. We created a ReactJS Web App that was hosted on AWS using S3, Lambda, add DynamoDB. </p>
 							<p class="body_text">Over the summer, I worked with the CyberML team to develop anomaly detection models for network traffic using Machine Learning. We created models from the ground up - starting with an initial research stage and ending with developed proof of concept models that are being carried forward by the CyberML team. These models will help Capital One identify new and existing threats on their network perimeter.</p>
                             <p class="body_text">I have also gained experience working with Agile Methodology and had the opportunity to use Capital One's Tech Invest In Yourself Days to gain skills in AWS and Unsupervised Learning.</p>
@@ -51,7 +63,9 @@
                     {{#*inline "modal_content"}}
                         {{#> describe skillset='[Programming Languages,OCaml,Ruby,Rust,line,Teaching,Gradescope,Piazza]'}}
                             {{#* inline "description"}}
-                            <p class="body_text">I was a CS Undergraduate Teaching Assistant for CMSC330 (Organization of Programming Languages). I held weekly office hours and helped students learn and understand the course material. </p>
+                            <p class="body_text">I am currently a peer mentor for the First-Year Innovation & Research Experience program. I am also a STIC Facilitator for CMSC389T (formerly CMSC388T).</p>
+                            <p class="body_text">During Winter 2021, I was a CS Undergradute Teaching Assistant for Introduction to Git, Github, and Project Management Tools (CMSC388T). I helped design the lectures, create the projects, and launch the new CMSC course. I also managed four teams in a basic DevOps environment.</p>
+                            <p class="body_text">During Fall 2020, I was a CS Undergraduate Teaching Assistant for CMSC330 (Organization of Programming Languages). I held weekly office hours and helped students learn and understand the course material. </p>
                             {{/inline}}
                         {{/describe}}
                     {{/inline}}
