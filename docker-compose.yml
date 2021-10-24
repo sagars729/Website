@@ -38,7 +38,7 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/var/www/html --email sagardsaxena@gmail.com --agree-tos --no-eff-email --staging -d sagardsaxena.com  -d www.sagardsaxena.com 
+    command: certonly --webroot --webroot-path=/var/www/html --email sagardsaxena@gmail.com --agree-tos --no-eff-email --staging -d sagardsaxena.com -d www.sagardsaxena.com -d dev.sagardsaxena.com 
 
   #MySQL Service
   db:
